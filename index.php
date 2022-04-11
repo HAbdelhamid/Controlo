@@ -1,3 +1,8 @@
+<?php
+
+    require_once ("php/component.php");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +20,33 @@
 <body>
     <main>
         <div class="container text-center">
-            <h1 class="py-4 bg-dark text-light rounded"><i class="fas fa-swatchbook"></i>Book Store</h1>
+            <h1 class="py-4 bg-dark text-light rounded"><i class="fas fa-swatchbook"></i> Book Store</h1>
+            <div class="d-flex justify-content-center">
+                <form action="" method="post" class="w-50">
+                    <div class="pt-2">
+                        <?php
+                            inputElement(icon:"<i class='fas fa-id-badge'></i>",placeholder:"ID",name:"book_id",value:"");
+                        ?>
+                    </div>
+                    <div class="pt-2">
+                        <?php
+                            inputElement(icon:"<i class='fas fa-book'></i>",placeholder:"Book Name",name:"book_name",value:"");
+                        ?>
+                    </div>
+                    <div class="row pt-2">
+                        <div class="col">
+                            <?php
+                                inputElement(icon:"<i class='fas fa-people-carry'></i>",placeholder:"Publisher",name:"book_Publisher",value:"");
+                            ?>
+                        </div>
+                        <div class="col">
+                            <?php
+                                inputElement(icon:"<i class='fas fa-dollar-sign'></i>",placeholder:"Price",name:"book_Price",value:"");
+                            ?>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </main>
 
