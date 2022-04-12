@@ -45,6 +45,12 @@
                             ?>
                         </div>
                     </div>
+                    <div class="d-flex">
+                        <?php buttonElement(btnid:"btn-create", styleclass:"btn btn-success", text:"<i class='fas fa-plus'></i>", name:"create", attr:"dat-toggle='tooltip' data-placment='bottom' title='create'"); ?>
+                        <?php buttonElement(btnid:"btn-read", styleclass:"btn btn-primary", text:"<i class='fas fa-sync'></i>", name:"read", attr:"dat-toggle='tooltip' data-placment='bottom' title='Read'"); ?>
+                        <?php buttonElement(btnid:"btn-update", styleclass:"btn btn-light border", text:"<i class='fas fa-pen-alt'></i>", name:"update", attr:"dat-toggle='tooltip' data-placment='bottom' title='Update'"); ?>
+                        <?php buttonElement(btnid:"btn-delete", styleclass:"btn btn-danger", text:"<i class='fas fa-trash-alt'></i>", name:"delete", attr:"dat-toggle='tooltip' data-placment='bottom' title='Delete'"); ?>
+                    </div>
                 </form>
             </div>
         </div>
