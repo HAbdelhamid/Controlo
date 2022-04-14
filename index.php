@@ -1,6 +1,8 @@
 <?php
 
-    require_once ("php/component.php");
+    require_once ("App/front-end/component.php");
+    require_once ("App/back-end/db.php");
+    createdb();
 
 ?>
 <!DOCTYPE html>
@@ -45,13 +47,35 @@
                             ?>
                         </div>
                     </div>
-                    <div class="d-flex">
+                    <div class="d-flex justify-content-center">
                         <?php buttonElement(btnid:"btn-create", styleclass:"btn btn-success", text:"<i class='fas fa-plus'></i>", name:"create", attr:"dat-toggle='tooltip' data-placment='bottom' title='create'"); ?>
                         <?php buttonElement(btnid:"btn-read", styleclass:"btn btn-primary", text:"<i class='fas fa-sync'></i>", name:"read", attr:"dat-toggle='tooltip' data-placment='bottom' title='Read'"); ?>
                         <?php buttonElement(btnid:"btn-update", styleclass:"btn btn-light border", text:"<i class='fas fa-pen-alt'></i>", name:"update", attr:"dat-toggle='tooltip' data-placment='bottom' title='Update'"); ?>
                         <?php buttonElement(btnid:"btn-delete", styleclass:"btn btn-danger", text:"<i class='fas fa-trash-alt'></i>", name:"delete", attr:"dat-toggle='tooltip' data-placment='bottom' title='Delete'"); ?>
                     </div>
                 </form>
+            </div>
+            <div class="d-flex table-data">
+                <table class="table table-striped table-dark">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Book Name</th>
+                            <th>Publisher</th>
+                            <th>Book Price</th>
+                            <th>Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        <tr>
+                            <td>1</td>
+                            <td>Lupin</td>
+                            <td>Hugo Malsin</td>
+                            <td>19.95</td>
+                            <td><i class="fas fa-edit btnedit"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </main>
