@@ -2,6 +2,7 @@
 
     require_once ("App/front-end/component.php");
     require_once ("App/back-end/db.php");
+    require_once ("App/operation.php");
     createdb();
 
 ?>
@@ -27,31 +28,31 @@
                 <form action="" method="post" class="w-50">
                     <div class="pt-2">
                         <?php
-                            inputElement(icon:"<i class='fas fa-id-badge'></i>",placeholder:"ID",name:"book_id",value:"");
+                            inputElement("<i class='fas fa-id-badge'></i>","ID","book_id","");
                         ?>
                     </div>
                     <div class="pt-2">
                         <?php
-                            inputElement(icon:"<i class='fas fa-book'></i>",placeholder:"Book Name",name:"book_name",value:"");
+                            inputElement("<i class='fas fa-book'></i>","Book Name","book_name","");
                         ?>
                     </div>
                     <div class="row pt-2">
                         <div class="col">
                             <?php
-                                inputElement(icon:"<i class='fas fa-people-carry'></i>",placeholder:"Publisher",name:"book_Publisher",value:"");
+                                inputElement("<i class='fas fa-people-carry'></i>","Publisher","book_publisher","");
                             ?>
                         </div>
                         <div class="col">
                             <?php
-                                inputElement(icon:"<i class='fas fa-dollar-sign'></i>",placeholder:"Price",name:"book_Price",value:"");
+                                inputElement("<i class='fas fa-dollar-sign'></i>","Price","book_price","");
                             ?>
                         </div>
                     </div>
                     <div class="d-flex justify-content-center">
-                        <?php buttonElement(btnid:"btn-create", styleclass:"btn btn-success", text:"<i class='fas fa-plus'></i>", name:"create", attr:"dat-toggle='tooltip' data-placment='bottom' title='create'"); ?>
-                        <?php buttonElement(btnid:"btn-read", styleclass:"btn btn-primary", text:"<i class='fas fa-sync'></i>", name:"read", attr:"dat-toggle='tooltip' data-placment='bottom' title='Read'"); ?>
-                        <?php buttonElement(btnid:"btn-update", styleclass:"btn btn-light border", text:"<i class='fas fa-pen-alt'></i>", name:"update", attr:"dat-toggle='tooltip' data-placment='bottom' title='Update'"); ?>
-                        <?php buttonElement(btnid:"btn-delete", styleclass:"btn btn-danger", text:"<i class='fas fa-trash-alt'></i>", name:"delete", attr:"dat-toggle='tooltip' data-placment='bottom' title='Delete'"); ?>
+                        <?php buttonElement("btn-create", "btn btn-success", "<i class='fas fa-plus'></i>", "create","dat-toggle='tooltip' data-placment='bottom' title='create'"); ?>
+                        <?php buttonElement("btn-read", "btn btn-primary","<i class='fas fa-sync'></i>","read","dat-toggle='tooltip' data-placment='bottom' title='Read'"); ?>
+                        <?php buttonElement("btn-update", "btn btn-light border","<i class='fas fa-pen-alt'></i>", "update","dat-toggle='tooltip' data-placment='bottom' title='Update'"); ?>
+                        <?php buttonElement("btn-delete", "btn btn-danger","<i class='fas fa-trash-alt'></i>","delete","dat-toggle='tooltip' data-placment='bottom' title='Delete'"); ?>
                     </div>
                 </form>
             </div>
