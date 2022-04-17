@@ -48,4 +48,17 @@ function TextNode($classname, $msg){
     echo $element;
 }
 
+
+
+// get data from mysql database
+function getData(){
+    $sql = "SELECT * FROM books";
+
+    $result = mysqli_query($GLOBALS['conn'], $sql);
+
+    if(mysqli_num_rows($result) > 0){
+        return $result;
+    }
+}
+
 ?>

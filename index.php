@@ -68,13 +68,32 @@
                         </tr>
                     </thead>
                     <tbody id="tbody">
-                        <tr>
-                            <td>1</td>
-                            <td>Lupin</td>
-                            <td>Hugo Malsin</td>
-                            <td>19.95</td>
-                            <td><i class="fas fa-edit btnedit"></i></td>
-                        </tr>
+                    <?php
+
+
+                        if(isset($_POST['read'])){
+                            $result = getData();
+
+                            if($result){
+
+                                while ($row = mysqli_fetch_assoc($result)){ ?>
+
+                                    <tr>
+                                        <td data-id="<?php echo $row['id']; ?>"><?php echo $row['id']; ?></td>
+                                        <td data-id="<?php echo $row['id']; ?>"><?php echo $row['book_name']; ?></td>
+                                        <td data-id="<?php echo $row['id']; ?>"><?php echo $row['book_publisher']; ?></td>
+                                        <td data-id="<?php echo $row['id']; ?>"><?php echo '$' . $row['book_price']; ?></td>
+                                        <td ><i class="fas fa-edit btnedit" data-id="<?php echo $row['id']; ?>"></i></td>
+                                    </tr>
+
+                        <?php
+                                }
+
+                            }
+                        }
+
+
+                        ?>
                     </tbody>
                 </table>
             </div>
